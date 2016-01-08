@@ -221,6 +221,18 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Views\app\404.html" />
+    <Content Include="App_Views\app\favicon.ico" />
+    <Content Include="App_Views\app\images\yeoman.png" />
+    <Content Include="App_Views\app\index.html" />
+    <Content Include="App_Views\app\robots.txt" />
+    <Content Include="App_Views\app\scripts\app.js" />
+    <Content Include="App_Views\app\scripts\controllers\about.js" />
+    <Content Include="App_Views\app\scripts\controllers\main.js" />
+    <Content Include="App_Views\app\styles\main.css" />
+    <Content Include="App_Views\app\views\about.html" />
+    <Content Include="App_Views\app\views\main.html" />
+    <Content Include="App_Views\Gruntfile.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\bootstrap.css" />
@@ -250,6 +262,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="App_Views\bower.json" />
+    <Content Include="App_Views\package.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
