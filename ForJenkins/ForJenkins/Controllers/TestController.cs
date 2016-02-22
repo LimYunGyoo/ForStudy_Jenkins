@@ -11,7 +11,13 @@ namespace ForJenkins.Controllers
     {
         public IHttpActionResult GetText()
         {
-            return Ok("result ok");
+            int result = 0;
+            for (int i = 0; i < 100000; i++)
+            {
+                result += i;       
+            }
+
+            return Ok("result ok : " + result);
         }
     }
 
