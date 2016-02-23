@@ -32,9 +32,16 @@ namespace ForJenkins.Controllers
             return Ok("result ok : " + result);
         }
 
-        public IHttpActionResult PostSlow()
+        public IHttpActionResult PostSlow([FromBody]SlowDto slowDto)
         {
             int result = 0;
+            int limit = 1000;
+
+            if (slowDto.limitNum != 0 && slowDto.limitNum != null)
+            {
+                limit = slowDto.limitNum;
+            }
+
 
             try
             {
@@ -78,6 +85,12 @@ namespace ForJenkins.Controllers
             return result;
         }
 
+    }
+
+    [Serializable]
+    public class SlowDto
+    {
+        public Int16 limitNum { get; set; }
     }
 }
 
