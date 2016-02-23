@@ -37,19 +37,17 @@ namespace ForJenkins.Controllers
             int result = 0;
             int limit = 1000;
 
-            if (slowDto.limitNum != 0 && slowDto.limitNum != null)
+            if (slowDto.LimitNum != 0 && slowDto.LimitNum != null)
             {
-                limit = slowDto.limitNum;
+                limit = slowDto.LimitNum;
             }
-
 
             try
             {
-                for (int i = 0; i < 1000; i++)
+                for (int i = 0; i < limit; i++)
                 {
                     SlowMan sm = new SlowMan();
                     result += sm.SlowMethod();
-
                 }
             }
             catch (Exception e)
@@ -57,7 +55,7 @@ namespace ForJenkins.Controllers
                 return Ok(e.ToString());
             }
 
-            return Ok("result ok : " + result);
+            return Ok("post <"+ limit + "> result ok: " + result);
         }
 
     }
@@ -90,7 +88,7 @@ namespace ForJenkins.Controllers
     [Serializable]
     public class SlowDto
     {
-        public Int16 limitNum { get; set; }
+        public Int16 LimitNum { get; set; }
     }
 }
 
