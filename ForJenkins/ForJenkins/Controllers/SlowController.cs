@@ -32,6 +32,27 @@ namespace ForJenkins.Controllers
             return Ok("result ok : " + result);
         }
 
+        public IHttpActionResult PostSlow()
+        {
+            int result = 0;
+
+            try
+            {
+                for (int i = 0; i < 1000; i++)
+                {
+                    SlowMan sm = new SlowMan();
+                    result += sm.SlowMethod();
+
+                }
+            }
+            catch (Exception e)
+            {
+                return Ok(e.ToString());
+            }
+
+            return Ok("result ok : " + result);
+        }
+
     }
     public class SlowMan
     {
