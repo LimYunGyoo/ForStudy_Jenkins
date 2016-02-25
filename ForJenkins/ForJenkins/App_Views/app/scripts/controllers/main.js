@@ -17,9 +17,10 @@ angular.module('jenkApp')
 
     $http({
         method: 'GET',
-        url: '/api/Text'
+        url: '/api/Test'
     }).then(function successCallback(response) {
-        alert("res : " + response);
+        alert("res : " + response.data);
+        console.log(response);
     }, function errorCallback(response) {
         alert("error!");
     });
