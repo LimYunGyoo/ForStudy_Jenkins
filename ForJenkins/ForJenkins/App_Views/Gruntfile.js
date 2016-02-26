@@ -453,7 +453,7 @@ module.exports = function (grunt) {
     'concurrent:test',
     'postcss',
     'connect:test',
-    'karma'
+    //'karma'
   ]);
 
   grunt.registerTask('build', [
@@ -467,7 +467,7 @@ module.exports = function (grunt) {
     'ngAnnotate',
     'copy:dist',
     //'cdnify',
-    //'cssmin',
+    'cssmin',
     'uglify',
     'filerev',
     'usemin',
