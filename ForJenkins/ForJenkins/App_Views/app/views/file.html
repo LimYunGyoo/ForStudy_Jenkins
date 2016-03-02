@@ -1,0 +1,34 @@
+﻿<p>This is the File view.</p>
+<button class="btn btn-success btn-xxs btn-outlined" ngf-select ng-model="ngfiles" ngf-multiple="true">NG 파일선택</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th width="50%">Name</th>
+            <th>Size</th>
+            <th>Progress</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in ngfiles" class="ng-scope">
+            <td>
+                <strong class="ng-binding" ng-bind="item.name"></strong>
+            </td>
+            <td nowrap="" class="ng-binding" ng-bind="item.size"></td>
+            <td>
+                <div class="progress" style="margin-bottom: 0;">
+                    <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }" style="width: 0%;"></div>
+                </div>
+            </td>
+            <td class="text-center">
+                <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+                <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" class="btn btn-success btn-xxs" ng-click="upload(ngfiles)" ng-disabled="isUploadComplete || (ngfiles.length == 0)">
+    <span class="glyphicon glyphicon-upload"></span> 모든파일업로드
+</button>

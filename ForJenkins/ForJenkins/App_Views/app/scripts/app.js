@@ -14,22 +14,28 @@ angular
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngSanitize'
+    'ngSanitize',
+    'ngFileUpload'
   ])
   .config(function ($routeProvider, $httpProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-    $httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+      $routeProvider
+        .when('/', {
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl',
+            controllerAs: 'main'
+        })
+        .when('/about', {
+            templateUrl: 'views/about.html',
+            controller: 'AboutCtrl',
+            controllerAs: 'about'
+        })
+        .when('/file', {
+            templateUrl: 'views/file.html',
+            controller: 'FileCtrl',
+            controllerAs: 'file'
+        })
+        .otherwise({
+            redirectTo: '/'
+        });
+      $httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
   });
