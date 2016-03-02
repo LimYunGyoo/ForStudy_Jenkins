@@ -237,6 +237,8 @@
     <Content Include="App_Views\app\index.html" />
     <Content Include="App_Views\app\robots.txt" />
     <Content Include="App_Views\app\scripts\app.js" />
+    <Content Include="App_Views\app\scripts\appconstant.js" />
+    <Content Include="App_Views\app\scripts\appconstant_DEV.js" />
     <Content Include="App_Views\app\scripts\controllers\about.js" />
     <Content Include="App_Views\app\scripts\controllers\main.js" />
     <Content Include="App_Views\app\styles\main.css" />
@@ -272,6 +274,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="App_Views\.bowerrc" />
     <Content Include="App_Views\bower.json" />
     <Content Include="App_Views\package.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -341,6 +344,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -359,7 +365,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>53278</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:53278/</IISUrl>
+          <IISUrl>http://localhost:8282/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

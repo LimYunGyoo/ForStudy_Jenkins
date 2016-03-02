@@ -8,10 +8,14 @@
  * Controller of the jenkinApp
  */
 angular.module('jenkinApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $http, resourceServerUrl) {
+
+      $scope.slow = function () {
+          $http.post(resourceServerUrl.requestUrl + 'api/slow', { 'LimitNum': 500 }).success(
+              function (data) {
+                  console.log(data);
+              });
+      }
+
+
   });
