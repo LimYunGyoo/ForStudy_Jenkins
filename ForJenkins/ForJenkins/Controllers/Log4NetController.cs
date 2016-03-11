@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using log4net;
+using System.Messaging;
 
 
 namespace ForJenkins.Controllers
@@ -18,13 +19,8 @@ namespace ForJenkins.Controllers
      
         public IHttpActionResult GetText()
         {
-            // thread properties...
-            //log4net.LogicalThreadContext.Properties["CustomColumn"] = "Custom value Thread";
-            
-            // ...or global properties
-            //log4net.GlobalContext.Properties["CustomColumn"] = "Custom value Global";
 
-            
+            Message logMessage = new Message();
             
             int result = 0;
             for (int i = 0; i < 100000; i++)
@@ -32,8 +28,15 @@ namespace ForJenkins.Controllers
                 result += i;
                 log.Info("Test INFO : " + result);
             }
+
+
+
+            logMessage.Body = result;
+            MessageQueue msgQ = new MessageQueue(".\\Private$\\logqueue");
+
+            msgQ.Send(logMessage);
+
             return Ok("result ok : " + result);
-            log.Error("Error : " + result);
         }
 
 
