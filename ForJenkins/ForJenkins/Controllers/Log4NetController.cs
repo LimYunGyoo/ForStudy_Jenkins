@@ -26,15 +26,18 @@ namespace ForJenkins.Controllers
             for (int i = 0; i < 100000; i++)
             {
                 result += i;
-                log.Info("Test INFO : " + result);
             }
 
 
 
             logMessage.Body = result;
             MessageQueue msgQ = new MessageQueue(".\\Private$\\logqueue");
+            Message ms = new Message();
+            ms.Body = result.ToString();
+            ms.Label = "result";
 
-            msgQ.Send(logMessage);
+
+            msgQ.Send(ms);
 
             return Ok("result ok : " + result);
         }
