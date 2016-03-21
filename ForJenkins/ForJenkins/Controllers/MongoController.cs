@@ -40,7 +40,7 @@ namespace ForJenkins.Controllers
                 result += i;
             }
 
-            Customer cust1 = new Customer { Name = "log", Age = result };
+            Customer cust1 = new Customer { Name = "log", Age = result, ThisTime = DateTime.Now };
 
             customers.InsertOne(cust1);
 
@@ -56,6 +56,8 @@ namespace ForJenkins.Controllers
 
         public string Name { get; set; }
         public int Age { get; set; }
+        public DateTime ThisTime { get; set; }
+
 
         public override string ToString()
         {
