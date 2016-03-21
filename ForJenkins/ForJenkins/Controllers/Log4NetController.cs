@@ -30,10 +30,10 @@ namespace ForJenkins.Controllers
 
 
 
-            logMessage.Body = DateTime.Now;
+            logMessage.Body = result;
             MessageQueue msgQ = new MessageQueue(".\\Private$\\logqueue");
             Message ms = new Message();
-            ms.Body = result.ToString();
+            ms.Body = DateTime.Now.ToString();
             ms.Label = "result";
 
 
