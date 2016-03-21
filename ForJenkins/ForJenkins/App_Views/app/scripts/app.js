@@ -14,8 +14,7 @@ angular
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngFileUpload'
+    'ngSanitize'
   ])
   .config(function ($routeProvider, $httpProvider) {
       $routeProvider
