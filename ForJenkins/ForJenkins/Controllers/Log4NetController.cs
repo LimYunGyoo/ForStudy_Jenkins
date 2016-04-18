@@ -16,7 +16,7 @@ namespace ForJenkins.Controllers
     public class Log4NetController : ApiController
     {        
         private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-     
+
         public IHttpActionResult GetText()
         {
 
@@ -42,6 +42,25 @@ namespace ForJenkins.Controllers
             return Ok("result ok : " + result);
         }
 
+
+        public IHttpActionResult PostText()
+        {
+
+            int result = 0;
+            for (int i = 0; i < 100000; i++)
+            {
+                result += i;
+            
+            }
+
+            log4net.Config.BasicConfigurator.Configure();
+
+            log.Info("Test I");
+            log.Error("Test E");
+            log.Debug("TEST D");
+
+            return Ok("result ok : " + result);
+        }
 
 
     }
