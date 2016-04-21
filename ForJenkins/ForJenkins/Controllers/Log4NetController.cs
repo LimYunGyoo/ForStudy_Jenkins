@@ -62,6 +62,5 @@ namespace ForJenkins.Controllers
             return Ok("result ok : " + result);
         }
 
-
     }
 }

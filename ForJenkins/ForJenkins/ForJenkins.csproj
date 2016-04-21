@@ -242,6 +242,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MeController.cs" />
     <Compile Include="Controllers\MongoController.cs" />
+    <Compile Include="Controllers\New4NetController.cs" />
     <Compile Include="Controllers\SlowController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
