@@ -374,6 +374,9 @@
     <None Include="Web.QA.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.TEST.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
     <None Include="Web.Try.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -405,6 +408,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Try|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'TEST|AnyCPU'">
     <OutputPath>bin\</OutputPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

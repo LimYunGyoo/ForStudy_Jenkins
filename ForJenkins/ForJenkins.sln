@@ -10,6 +10,7 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 		QA|Any CPU = QA|Any CPU
 		Release|Any CPU = Release|Any CPU
+		TEST|Any CPU = TEST|Any CPU
 		Try|Any CPU = Try|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
@@ -19,6 +20,8 @@ Global
 		{93B8B77D-6476-422F-BDB6-A4588ACD5C78}.QA|Any CPU.Build.0 = Debug|Any CPU
 		{93B8B77D-6476-422F-BDB6-A4588ACD5C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93B8B77D-6476-422F-BDB6-A4588ACD5C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93B8B77D-6476-422F-BDB6-A4588ACD5C78}.TEST|Any CPU.ActiveCfg = TEST|Any CPU
+		{93B8B77D-6476-422F-BDB6-A4588ACD5C78}.TEST|Any CPU.Build.0 = TEST|Any CPU
 		{93B8B77D-6476-422F-BDB6-A4588ACD5C78}.Try|Any CPU.ActiveCfg = Debug|Any CPU
 		{93B8B77D-6476-422F-BDB6-A4588ACD5C78}.Try|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
