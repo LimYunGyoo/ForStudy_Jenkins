@@ -365,6 +365,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.ForJenkins_QA.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.ForJenkins_Try.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
     <None Include="Web.QA.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
