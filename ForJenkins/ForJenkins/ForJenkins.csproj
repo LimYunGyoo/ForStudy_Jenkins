@@ -306,6 +306,7 @@
     <Content Include="App_Views\.bowerrc" />
     <Content Include="App_Views\bower.json" />
     <Content Include="App_Views\package.json" />
+    <None Include="Properties\PublishProfiles\RELEASE.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -365,7 +366,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
