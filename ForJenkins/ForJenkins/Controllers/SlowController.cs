@@ -30,7 +30,7 @@ namespace ForJenkins.Controllers
                 return Ok(e.ToString());
             }
 
-            return Ok("result ok : " + result);
+            return Ok("result ok, this is " + System.Configuration.ConfigurationManager.AppSettings["TEST_CONFIG"] + " >> " + result);
         }
 
         public IHttpActionResult PostSlow([FromBody]SlowDto slowDto)
